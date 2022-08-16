@@ -12,16 +12,16 @@
 * Definir propriedade de Color
 */
 * {
-    color: var(--fontColor); /* var fontColor foi criada no light e dark themes */
+    color: var(--fontColor); /* var --fontColor foi criada no light e dark themes */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /*
 * BODY
-* Usa var bg que foi criada no light e dark themes
+* Usa var --bg que foi criada no light e dark themes
 */
 body {
-    background: var(--bg); /* var bg foi criada no light e dark themes */
+    background: var(--bg); /* var --bg foi criada no light e dark themes */
 }
 
 ul {
@@ -40,9 +40,33 @@ ul {
 .light-theme {
     --bg: var(--green);
     --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
 }
 
 .dark-theme {
     --bg: var(--black);
     --fontColor: var(--white);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+/*
+* Botão
+* Cria variável --btnBg e --btnFotnColor
+*/
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 280px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+.btn:focus {
+    outline-style: none;
 }
